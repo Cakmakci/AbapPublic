@@ -5,3 +5,4 @@
 *&---------------------------------------------------------------------*
 REPORT ZPA_PROGRAM2.
 WRITE:'HOŞGELDIN CCAKMAKCI'.
+WRITE:'YENI EKLENDI'.
