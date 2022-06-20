@@ -1,0 +1,808 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>ME Fonksiyon Grubu</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZUBME_FG001D01</SOBJ_NAME>
+    <SOBJ_NAME>LZUBME_FG001F01</SOBJ_NAME>
+    <SOBJ_NAME>LZUBME_FG001TOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZUBME_FG001</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZUBME_FG001_001</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>ME İçin Gerekli Tablolar</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>ET_TABLE_NAMES</PARAMETER>
+       <DBSTRUCT>ZUBME_S001</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>ET_T001</PARAMETER>
+       <DBSTRUCT>ZUBME_T001</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>ET_T002</PARAMETER>
+       <DBSTRUCT>ZUBME_T002</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>ET_T006</PARAMETER>
+       <DBSTRUCT>ZUBME_T006</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>ET_T007</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZUBPP_TT052</TYP>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>ET_T005T</PARAMETER>
+       <DBSTRUCT>ZUBME_S002</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>ET_T003</PARAMETER>
+       <DBSTRUCT>ZUBME_T003</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>ET_T008</PARAMETER>
+       <DBSTRUCT>ZUBME_T008</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>ET_TABLE_NAMES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table Names</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_T001</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ME Duruş Entegrasyonu</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_T002</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ME Reason Code Additional Process</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_T006</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Etiket okuma zaman kısıtı</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_T007</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ZUBPP_S102 tt</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_T005T</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>MII Teyit Hata Mesajları</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_T003</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sortf detail</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_T008</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Malzeme -  Sinyal Eşleşmesi</STEXT>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZUBME_FG001_002</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>ME&apos;den Çıktılar Alma</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IP_WERKS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>WERKS_D</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_ARBPL</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ARBPL</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_MATNR</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>MATNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_GOOD_QTY</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>MENGE_D</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_SCRAP</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>MENGE_D</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_CHARG</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHARG_D</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_SHIFT</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZUBMM_DD019</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_AUFNR</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>AUFNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_PERNR</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>PERNR_D</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_UNAME</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>UNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_SFC_NUMBER</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZUBME_DD001</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_USE_ETKNO</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZUBMM_DD018</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_PRINT_BOX_LABEL</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>XFELD</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_PRINT_PART_LABEL</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>XFELD</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_PRINT_REMAINING_BOX_LABEL</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>XFELD</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_STATUS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZUBPP_DD394</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EP_SUBRC</PARAMETER>
+       <TYP>SYSUBRC</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>ET_PART_LABEL_LIST</PARAMETER>
+       <TYP>ZUBPP_TT003</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IP_WERKS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Üretim yeri</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_ARBPL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>İşyeri</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_MATNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Malzeme numarası</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_GOOD_QTY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Miktar</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_SCRAP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Miktar</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_CHARG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Parti numarası</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_SHIFT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Vardiya</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_AUFNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sipariş numarası</STEXT>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_PERNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Personel numarası</STEXT>
+       <INDEX> 009</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_UNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kullanıcı adı</STEXT>
+       <INDEX> 010</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_SFC_NUMBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>SFC Number</STEXT>
+       <INDEX> 011</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_USE_ETKNO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Etiket Numarası</STEXT>
+       <INDEX> 012</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_PRINT_BOX_LABEL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kasa etiketi alınsın mı ?</STEXT>
+       <INDEX> 013</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_PRINT_PART_LABEL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Parça etiketi alınsın mı ?</STEXT>
+       <INDEX> 014</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_PRINT_REMAINING_BOX_LABEL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kalan miktar için kasa etiketi alınsın mı ?</STEXT>
+       <INDEX> 015</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_STATUS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Etiket Blokaj Durumu</STEXT>
+       <INDEX> 016</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_SUBRC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Dönüş değeri</STEXT>
+       <INDEX> 017</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_PART_LABEL_LIST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Seri Numarası ( Sipariş Numarası )</STEXT>
+       <INDEX> 018</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZUBME_FG001_003</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Get Sortf From Resb</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IP_RSNUM</PARAMETER>
+       <TYP>RESB-RSNUM</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_RSPOS</PARAMETER>
+       <TYP>RESB-RSPOS</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EP_SORTF</PARAMETER>
+       <TYP>RESB-SORTF</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IP_RSNUM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Rezervasyon/ikincil ihtiyaç numarası</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_RSPOS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Rezervasyon/ikincil ihtiyaç kalem numarası</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_SORTF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sıralama ölçütü</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZUBME_FG001_004</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>SORTF - ETKNO result</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IP_WERKS</PARAMETER>
+       <TYP>WERKS_D</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_SORTF</PARAMETER>
+       <TYP>SORTF</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_ETKNO</PARAMETER>
+       <TYP>STRING</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EP_MATNR</PARAMETER>
+       <TYP>MATNR</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EP_CPUDT</PARAMETER>
+       <TYP>CRDAT</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EP_CPUTM</PARAMETER>
+       <TYP>CR_TIME</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EP_BLKAJ</PARAMETER>
+       <TYP>ZUBMM_DD023</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IP_WERKS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Üretim yeri</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_SORTF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sıralama düzeni</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_ETKNO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>40 karakter uzunluğundaki metin</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_MATNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Malzeme numarası</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_CPUDT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Yaratma tarihi</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_CPUTM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Yaratma saati</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_BLKAJ</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Blokaj</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZUBME_FG001_005</FUNCNAME>
+     <SHORT_TEXT>Karar Fonksiyonu</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IP_KIOSK_NAME</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZUBPP_DD171</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_WERKS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>WERKS_D</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_MATNR</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>MATNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_SHIFT</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZUBPP_DD009</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_UNAME</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>UNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_SHIFT_START_DATE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>DATUM</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EP_SUBRC</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SYSUBRC</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EP_PRUEFLOS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>QPLOS</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EP_REASON_CODE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZUBPP_DD393</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IP_KIOSK_NAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kiosk Adı</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_WERKS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Üretim yeri</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_MATNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Malzeme numarası</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_SHIFT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Vardiya</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_UNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kullanıcı adı</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_SHIFT_START_DATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tarih</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_SUBRC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Dönüş değeri</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_PRUEFLOS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kontrol partisi numarası</STEXT>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_REASON_CODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kullanım Kararı Pasif Olma Nedeni</STEXT>
+       <INDEX> 009</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZUBME_FG001_006</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>ME Üretilen Son Parça Bilgisi - Kaydet</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IP_KIOSK_NAME</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZUBPP_DD171</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_MATNR</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>MATNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_WERKS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>WERKS_D</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_SHIFT</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZUBMM_DD019</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IP_KIOSK_NAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kiosk Adı</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_MATNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Malzeme numarası</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_WERKS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Üretim yeri</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_SHIFT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Vardiya</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZUBME_FG001_007</FUNCNAME>
+     <SHORT_TEXT>Test Süreci Karar Fonksiyonu</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IP_KIOSK_NAME</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZUBPP_DD171</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_WERKS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>WERKS_D</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_MATNR</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>MATNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_UNAME</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>UNAME</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EP_SUBRC</PARAMETER>
+       <TYP>SYSUBRC</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EP_PRUEFLOS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>QPLOS</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EP_REASON_CODE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZUBPP_DD393</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IP_KIOSK_NAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kiosk Adı</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_WERKS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Üretim yeri</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_MATNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Malzeme numarası</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_UNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kullanıcı adı</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_SUBRC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Dönüş değeri</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_PRUEFLOS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kontrol partisi numarası</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_REASON_CODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kullanım Kararı Pasif Olma Nedeni</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZUBME_FG001_008</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Karar Fonksiyonu</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IP_KIOSK_NAME</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZUBPP_DD171</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_WERKS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>WERKS_D</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_MATNR</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>MATNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_SHIFT</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZUBPP_DD009</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_UNAME</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>UNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_SHIFT_START_DATE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>DATUM</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IP_QM_CONTROL_TYPE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZUBPP_DD446</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EP_SUBRC</PARAMETER>
+       <TYP>SYSUBRC</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EP_PRUEFLOS</PARAMETER>
+       <TYP>QPLOS</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EP_REASON_CODE</PARAMETER>
+       <TYP>ZUBPP_DD393</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IP_KIOSK_NAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kiosk Adı</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_WERKS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Üretim yeri</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_MATNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Malzeme numarası</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_SHIFT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Vardiya</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_UNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kullanıcı adı</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_SHIFT_START_DATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tarih</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IP_QM_CONTROL_TYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>QM Kontrol Türü</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_SUBRC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Dönüş değeri</STEXT>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_PRUEFLOS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kontrol partisi numarası</STEXT>
+       <INDEX> 009</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EP_REASON_CODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Kullanım Kararı Pasif Olma Nedeni</STEXT>
+       <INDEX> 010</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

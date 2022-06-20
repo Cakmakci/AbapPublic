@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DOMA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD01V>
+    <DOMNAME>ZUBME_DM006</DOMNAME>
+    <DDLANGUAGE>T</DDLANGUAGE>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000128</LENG>
+    <OUTPUTLEN>000128</OUTPUTLEN>
+    <VALEXI>X</VALEXI>
+    <DDTEXT>Time Element</DDTEXT>
+   </DD01V>
+   <DD07V_TAB>
+    <DD07V>
+     <DOMNAME>ZUBME_DM006</DOMNAME>
+     <VALPOS>0001</VALPOS>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DOMVALUE_L>SCHED_DOWN</DOMVALUE_L>
+     <DDTEXT>SCHED_DOWN</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZUBME_DM006</DOMNAME>
+     <VALPOS>0002</VALPOS>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DOMVALUE_L>QUAL_LOSS</DOMVALUE_L>
+     <DDTEXT>QUAL_LOSS</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZUBME_DM006</DOMNAME>
+     <VALPOS>0003</VALPOS>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DOMVALUE_L>UNSCD_DOWN</DOMVALUE_L>
+     <DDTEXT>UNSCD_DOWN</DDTEXT>
+    </DD07V>
+   </DD07V_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
